@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Kartu Ucapan Ulang Tahun</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Loading Page -->
+  <div class="page active" id="loading">
+    <div class="content-box">
+      <h1>Loading...</h1>
+    </div>
+  </div>
+
+  <!-- Page 1: Input kode ulang tahun -->
+  <div class="page" id="page1">
+    <div class="content-box">
+      <h2>Masukkan password:</h2>
+      <div id="code-input" class="code-input"></div>
+      <div class="keypad">
+        <button onclick="addDigit('1')">1</button>
+        <button onclick="addDigit('2')">2</button>
+        <button onclick="addDigit('3')">3</button>
+        <button onclick="addDigit('4')">4</button>
+        <button onclick="addDigit('5')">5</button>
+        <button onclick="addDigit('6')">6</button>
+        <button onclick="addDigit('7')">7</button>
+        <button onclick="addDigit('8')">8</button>
+        <button onclick="addDigit('9')">9</button>
+        <button onclick="clearCode()">⌫</button>
+        <button onclick="addDigit('0')">0</button>
+        <button onclick="checkCode()">OK</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Page 2 -->
+  <div class="page" id="page2">
+    <div class="content-box">
+      <h1>Happy Birthday Nata 🎉</h1>
+      <p>Semoga hal baik selalu beriringan denganmu</p>
+      <p>Semoga semesta senantiasa berpihak padamu</p>
+      <p>Semoga jalanmu untuk mencapai masa depan yang cerah dipermudahkan</p>
+      <p>Teruslah tumbuh, Teruslah melangkah & berbahagialah</p>
+      <p>Aku akan selalu bangga atas setiap proses yang sudah kamu lalui sayang :)</p>
+      <p>Berkelanalah, i will always support u from afar</p>
+      <button onclick="nextPage(3)">Lanjut</button>
+    </div>
+  </div>
+
+  <!-- Page 3 -->
+  <div class="page" id="page3">
+    <div class="content-box">
+      <h2>to my fav person 🎂</h2>
+      <p>Anak kuat, selamat. Karena kembali menemui tanggal tujuh belas. Selamat karena sudah bertahan sampai angka dua puluh dua. Kalau tahun-tahun sebelumnya kamu rayakan sendirian, sekarang hangatnya rumahmu kembali menyala. Senyummu kembali, kalah manis dengan eskim coklat punyaku. Di dunia yang punya bermilyar-milyar manusia, aku salah satu diantara mereka yang menyayangimu. Berharap di tahun-tahun selanjutnya, bahagia selalu bersamamu. Dimanapun langkahmu berada, semoga Tuhan melindungimu. dan berharap semesta mendekapmu dari manusia-manusia jahat itu. Karena kau anak yang baik, tidak pantas jika ada yang menyakitimu barang sejengkal pun itu.</p>
+      <button onclick="nextPage(4)">Lanjut</button>
+    </div>
+  </div>
+
+  <!-- Page 4 -->
+<div id="page4" class="page">
+  <div class="content-box">
+    <h2>YEAY YEAYYY 🎉</h2>
+    <img src="nata.jpg" alt="Foto Nata" class="birthday-photo">
+    <p>Terimakasih sudah lahir dan berhasil ku temui di sudut bumi. Terimakasih sudah bertahan dan berjuang. Panjang umur dan sehat selalu ya? nanti jika waktunya berpihak, semoga menemuimu menjadi hal yang mudah.</p>
+    <p>Kalau kau dari planet yang lain, benar kata Sal Priadi tentang sebuah lirik lagu "dikirim ke bumi untuk, orang-orang sepertiku"🤍</p>
+    <p>btw aku suka foto ini xixixi</p>
+   <button class="next-btn" onclick="nextPage(5)">Lanjut </button>
+  </div>
+</div>
+
+  <!-- Page 5 -->
+  <div class="page" id="page5">
+    <div class="content-box">
+      <h2>Happy Birthday Sayanggg 🤍</h2>
+      <p>sowwy gabisa ada di hari bahagia kamu yaa :(</p>
+      <p>and kadonya nyusul yak, aku mau kasi langsung 🤫</p>
+    </div>
+  </div>
+
+  <!-- Musik -->
+  <audio id="bg-music" loop>
+    <source src="lagu.mp3" type="audio/mpeg">
+    Browser kamu tidak mendukung audio.
+  </audio>
+
+  <!-- Tombol Play -->
+  <button id="play-btn" class="circle-btn">
+    <svg id="icon-play" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="white">
+      <path d="M8 5v14l11-7z"/>
+    </svg>
+    <svg id="icon-pause" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="white" style="display:none;">
+      <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/>
+    </svg>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>
